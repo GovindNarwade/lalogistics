@@ -92,6 +92,6 @@ app.use('/api/v1',contact)
 
 app.use('/swagger-api-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 // swagger api http://192.168.43.220:37234/swagger-api-doc/
-app.listen(process.env.PORT, () => console.log(`http://192.168.43.220:${process.env.PORT ||5000}`))
+app.listen(process.env.PORT, () => console.log(`http://localhost:${process.env.PORT ||5000}`))
  // https://lalogistics.herokuapp.com/swagger-api-doc/
 require('./endpoints')(app)
