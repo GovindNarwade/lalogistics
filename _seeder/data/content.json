@@ -1,0 +1,22 @@
+[
+    {
+        "ContentId":1,
+        "ContentName":"Biological Sample"
+    },
+    {
+        "ContentId":2,
+        "ContentName":"Stady Medicine"
+    },
+    {
+        "ContentId":3,
+        "ContentName":"Lab kit"
+    },
+    {
+        "ContentId":4,
+        "ContentName":"PCR KIT"
+    },
+    {
+        "ContentId":5,
+        "ContentName":"Other"
+    }
+]

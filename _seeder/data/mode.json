@@ -1,0 +1,14 @@
+[
+    {
+        "ModeTypeId":"1",
+        "ModeTypeName":"Air"
+    },
+    {
+        "ModeTypeId":"2",
+        "ModeTypeName":"Road"
+    },
+    {
+        "ModeTypeId":"3",
+        "ModeTypeName":"Train"
+    }
+]

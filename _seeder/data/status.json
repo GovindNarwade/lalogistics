@@ -1,0 +1,18 @@
+[
+    {
+        "statusId":1,
+        "Status":"Docket Created"
+    },
+    {
+        "statusId":2,
+        "Status":"Docket PickUp"
+    },
+    {
+        "statusId":3,
+        "Status":"Docket Recived "
+    },
+    {
+        "statusId":4,
+        "Status":"Docket Delivered"
+    }
+]
