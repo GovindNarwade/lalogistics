@@ -2,7 +2,7 @@ const reminder = require("../model/customer_model")
 const billing = require("../model/billing_model")
 const nodemailer = require("nodemailer")
 exports.SendReminder = async(req,res) =>{
-        let data = await reminder.findOne({Email:req.body.Email})
+        let data = await billing.Customer.findOne({Email:req.body.Email})
         let billingData =  await billing.find()
         const responseType = {};
         if(data){
