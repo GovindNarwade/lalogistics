@@ -2,7 +2,7 @@ const reminder = require("../model/customer_model")
 const nodemailer = require("nodemailer")
 const billing = require("../model/billing_model")
 exports.SendReminder = async(req,res) =>{
-        let data = await reminder.findOne({Email:req.body.Email})
+       let data = await  reminder.findOne({Email:req.body.Email})
         const responseType = {};
         if(data){
             var  transporter = nodemailer.createTransport({
@@ -16,24 +16,19 @@ exports.SendReminder = async(req,res) =>{
               from:"icaet20@nmiet.edu.in",
               to :req.body.Email ,
               subject :"Reminder for Billing",
-              text:`Dear ${data.CustomerName},
-              This is a notice that invoice ${data.INVOICE} which was originally generated on ${billing.InvoiceDate} has been updated.
+              text:`Dear ${data.Customer.CustomerName},
+              This is a notice that invoice ${data.INVOICE} which was originally generated on ${data.InvoiceDate} .
               Your payment method :PayUmoney,
-              Invoice : ${billing.INVOICE},
-              Amount Due: ${billing.totalAmount},
-              Due Date:28/09/2022 ,
-
-              Invoice Items
-               ${billing.Particular} (${billing.InvoiceDate}) ${billing.totalAmount}INR
-                LateFee : (Added 02/09/2022) ₹567.00INR ,
-
+              Invoice : ${data.INVOICE},
+              Amount : ${data.totalAmount},
+            
                 --------------------------------------------------------------
-
-                Sub Total : ${billing.totalAmount}INR ,
-                 Credit : 0.00INR ,
-                 ToTal :${billing.totalAmount}INR
-              
-              ----------------------------------------------------------------
+                    Invoice Items
+                   ${data.Particular} (${data.InvoiceDate}) ${data.totalAmount}INR
+  
+                --------------------------------------------------------------
+                        ToTal :${data.totalAmount}INR
+                ---------------------------------------------------------------
               Best Regards 
               LALogistics`
 

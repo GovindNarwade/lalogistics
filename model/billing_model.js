@@ -31,6 +31,12 @@ const billingSchema = mongoose.Schema({
     totalAmount:{
         type:Number
     },
+    BillingReminder:{
+        type:String
+    },
+    weeklyreminderDate:{
+        type:String
+    }
 },{
 timestamps:true
 })

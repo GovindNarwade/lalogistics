@@ -11,7 +11,11 @@ try {
         totalNonTaxableAmount:req.body.totalNonTaxableAmount,
         totalTaxableAmount:req.body.totalTaxableAmount,
         totalTax:req.body.totalTax,
-        totalAmount:req.body.totalAmount
+        totalAmount:req.body.totalAmount,
+        BillingReminder:req.body.BillingReminder,
+    weeklyreminderDate:req.body.weeklyreminderDate
+
+
        
     })
     res.json({

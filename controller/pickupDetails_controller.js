@@ -4,7 +4,7 @@ exports.createPickupDetails=async (req,res)=>{
        const result = await  PickupDetails.create({
         Date:req.body.Date,
         Time:req.body.Time ,
-        RequestedId:Math.floor((Math.random()*100000)+1) ,
+        RequestedId:Math.floor((Math.random()*10000)+1) ,
         Reference:req.body.Reference ,
         CustomerId: req.body.CustomerId,
         DestinationId:req.body. DestinationId,

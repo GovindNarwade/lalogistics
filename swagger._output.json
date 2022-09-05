@@ -4808,8 +4808,15 @@
       "totalAmount":{
           "type":"Number",
           "example":""
-      }
-       
+      },
+      "BillingReminder":{
+        "type":"String",
+        "example":""
+    },
+       "weeklyreminderDate":{
+        "type":"String",
+        "example":""
+       }
         }
       },
      "DeliveryBoy":{
