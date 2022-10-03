@@ -52,6 +52,15 @@ exports.getBillingDetails = async(req,res)=>{
                     as:"BillingItem"
                 }
             },
+            {
+                $lookup:{
+                    from:'hsncodes',
+                    localField:'HSNCodeId',
+                    foreignField:'HSNCodeId',
+                    as:"HSNCode"
+                }
+            },
+            
         ])
         res.json({
             count:result.length,
