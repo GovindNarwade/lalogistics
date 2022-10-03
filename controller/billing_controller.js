@@ -1,10 +1,11 @@
 const billing = require("../model/billing_model")
 exports.CreateBillingDetails = async(req,res)  => {
 try {
+    let count = (await billing.countDocuments()+1)+100;
     const result = await billing.create({
         BillingId: Math.floor((Math.random()*100000)+1),
         CustomerId: req.body.CustomerId,
-        INVOICE: Math.floor((Math.random()*1000)+1),
+        INVOICE: "Invoice"+count ,
         InvoiceDate: req.body.InvoiceDate,
         INVOICEDuration: req.body.INVOICEDuration,
         PlaceofSupply: req.body.PlaceofSupply,

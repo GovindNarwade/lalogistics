@@ -1,21 +1,21 @@
 [
     {
-        "HSNCodeId":1,
+        "HSNCodeId":996531,
         "HSNCodeName":"DOMESTIC FREIGHT",
         "HSNCode":996531
     },
     {
-        "HSNCodeId":2,
+        "HSNCodeId":996541,
         "HSNCodeName":"BOX CHARGES",
         "HSNCode":996541
     },
     {
-        "HSNCodeId":3,
+        "HSNCodeId":281121,
         "HSNCodeName":"DRY ICE CHARGES",
         "HSNCode":281121
     },
     {
-        "HSNCodeId":4,
+        "HSNCodeId":998599,
         "HSNCodeName":"DG CHARGES",
         "HSNCode":998599
     }
