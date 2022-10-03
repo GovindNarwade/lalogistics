@@ -28,7 +28,7 @@ try {
 } catch (error) {
     res.json({
         success:true,
-        message:"Something Went Worng"+ Error,
+        message:`Something Went Worng + ${error}`,
         data:null
     })
 }
