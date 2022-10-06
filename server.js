@@ -45,6 +45,7 @@ const podImage= require("./routes/podImage_routes")
 const billingbyDocket= require("./routes/BillingbyDocketMapping_routes")
 const Report = require("./routes/Reports_routes")
 const contact = require("./routes/contactus_routes")
+const officeLogin = require("./routes/officeLogin_Routes")
 
 db()
 app.use(express.json())
@@ -89,6 +90,7 @@ app.use('/api/v1',podImage)
 app.use('/api/v1',billingbyDocket)
 app.use('/api/v1',Report)
 app.use('/api/v1',contact)
+app.use('/api/v1',officeLogin)
 
 app.use('/swagger-api-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 // swagger api http://192.168.43.220:37234/swagger-api-doc/
